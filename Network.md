@@ -11,7 +11,7 @@
 - WAN (Wide area network): Extend over a large geograpghic area. Comppsed of many LANs
 - DCN (Data Center Network): Use in data senter to exchange data fast
 ## How the Internet work
-- Device connect to Wifi -> Wifi connect the device to the ISP (Internet service provider) -> The ISP connect to the network
+- Device connect to WiFi -> WiFi connect the device to the ISP (Internet service provider) -> The ISP connect to the network
 - Ipv4: 32 bits long. 4 billion IP address (Eg: 192.8.23.127)
   - First number: Country network
   - Second number: Regional network
@@ -24,6 +24,10 @@
 
 ## How to create a network
 - Wire and wireless: 
+  - Wire: 
+    - Copper cables: Use a type of twisted pair cable -> Send pulse of electricity following the Ethernet standards to transmit data -> Also called Ethernet cable
+    - Fiber-optic cables: Contain an optical fiber that carry light -> Send Pulse of light following Ethernet standards -> Transfer data much faster than copper cables
+  - Wireless: A wireless card inside the computer turns binary data into radio waves -> Radio waves are picked up by wireless access point that connect to the rest of the network using cables -> Turn radio waves back into binary (Eg: WiFi)
 - IP
 - TCP/UDP
 - TLS
