@@ -60,7 +60,15 @@
   - Eg: 192.168.1.0 /24
 - Local loopback: 127.0.0.1 -> Access your own device
   
+## Static IP address
+- User assign manually
+- A lot of work to make sure each device has a unique IP address if ther are many devices -> Use dynamic IP address
+  
 ## Dynamic IP address
 - DHCP (Dynamic Host Configuration Protocol) lease out IP address to device -> Device doesn't own the IP address -> If IP address is not used anymore -> Expired -> DHCP can assign that IP address to another device
-- DHCP send IP address along with subnet mask, a default gateway, and DNS server.
+- DHCP assign IP address from its scope along with subnet mask, a default gateway, and DNS server.
+- Scope: A range of IP addresses that a DHCP can give out
 - After a certain period of time, during lease time, device will send a signal to the DHCP to renew its lease of IP address -> DHCP will know that IP address is still being used 
+- Can make reservation on DHCP using MAC address -> DHCP server will give that specific IP address everytime to that MAC address -> Usually given to server, printer, router,...
+- DHCP is a service that run on a server (like Microsoft server or Linux server) or router as well
+
