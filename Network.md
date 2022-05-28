@@ -72,3 +72,8 @@
 - Can make reservation on DHCP using MAC address -> DHCP server will give that specific IP address everytime to that MAC address -> Usually given to server, printer, router,...
 - DHCP is a service that run on a server (like Microsoft server or Linux server) or router as well
 
+## Default gateway
+- A default gateway forward data from one network to another (Typically a router)
+- Default: The first option that is looked up when data needs to exit a network
+- If computer A and computer B are on the same network -> Computer B send its MAC address to computer A -> Two computer can communicate
+- If computer A and computer B are on different network -> Computer A get the default gateway MAC address -> Send it data through the gateway -> Send its data to computer B
