@@ -66,8 +66,27 @@
   
 ## Dynamic IP address
 - DHCP (Dynamic Host Configuration Protocol) lease out IP address to device -> Device doesn't own the IP address -> If IP address is not used anymore -> Expired -> DHCP can assign that IP address to another device
-- DHCP assign IP address from its scope along with subnet mask, a default gateway, and DNS server.
-- Scope: A range of IP addresses that a DHCP can give out
+- When a device join a network, there are 4 steps for it to get an IP address
+  - DHCP DISCOVER: Client send a DHCP DISCOVER message to every device on the network. This message is a broadcast 
+  - DHCP OFFER: Offer an IP address to the client
+  - DHCP REQUEST: Client send a message that it accept that IP address
+  - DHCP ACK: Send other information to client like subnet mask, default gateway, DNS server,...
+
+## DHCP
+### What is DHCP
+- DHCP (Dynamic Host Configuration Protocol) assign IP address from its scope along with subnet mask, a default gateway, DNS server and other configuration.
+- Scope: A range of IP addresses that a DHCP can give out and all the information related to the subnet that it is in
+### Component of DHCP scope
+- Starting IP nad Ending IP: The range of IP that DHCP can gice out
+- Subnet mask
+- Exclude IP: IP address that should not be assigned to new device that join the network
+- Reserve IP: Specific device will be assigned the same IP address every time it join the network. DHCP recognise the device using its MAC address -> Assign the reserve IP to it
+- DHCP server: Typiclly a server or a router that holds the network configuration
+- DHCP client: The endpoint that gets the configuration information like a computing device
+- DHCP Relay Agent: If there is only one DHCP for multiple LANs then DHCP relay agent will forward DHCP request to the server because DHCP packets cannot move through router
+- IP address pool: Contains list of IP address which are available
+- Lease time: The ammount of time for which the IP address is available to the client
+
 - After a certain period of time, during lease time, device will send a signal to the DHCP to renew its lease of IP address -> DHCP will know that IP address is still being used 
 - Can make reservation on DHCP using MAC address -> DHCP server will give that specific IP address everytime to that MAC address -> Usually given to server, printer, router,...
 - DHCP is a service that run on a server (like Microsoft server or Linux server) or router as well
