@@ -101,9 +101,12 @@
 ## Public vs private IP address
 ### Public IP address
 - IP address that are registered on the Internet. Typically given to routers. 
+- Public IP addresses are assigned by ISP
+- Public IP is not free
 - However, if every device has a public IP address -> Run out of IPv4 -> Use private IP address
 ### Private IP address
-- Router gives private IP address to the device in that network -> Device in different network can have the same private IP address
+- Private IP addresses are assigned by router to devices in that network -> Device in different network can have the same private IP address
+- Private IP is free
 - When a device want to connect to the Internet -> Router uses NAT (Network address translation) to turn private IP address into public one
 - NAT also translate public IP to private IP
 - Three classes of private IP address
