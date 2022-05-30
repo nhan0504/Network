@@ -48,12 +48,15 @@
 - Subnetting: Borrow bits from host ID to divide into smaller subnet
 - Divide into 5 classes: First 3 classes are for commercial use
   - Class A: Produce upto 16 million host -> Use for organization with very large ammount of host (Eg: ISP)
+    - First bit: 0
     - First octet: 1 - 126
     - Subnet mask: 255.0.0.0
   - Class B: Produce upto 65,000 hosts -> Use for medium to large organization
+    - First 2 bits: 10
     - First octet: 128 - 191
     - Subnet mask: 255.255.0.0
   - Class C: Produce up to 254 host (Because all 1s or 0s are used for broadcasting)
+    - First 3 bits: 110
     - First octet: 192 - 223
     - Subnet mask: 255.255.255.0
 - Subnet mask can be written in a method called CIDR (Classless Inter-Domain Routing) or slash notation. The number behind the slash is the number of 1 in the subnet mask
@@ -74,22 +77,25 @@
 
 ## DHCP
 ### What is DHCP
-- DHCP (Dynamic Host Configuration Protocol) assign IP address from its scope along with subnet mask, a default gateway, DNS server and other configuration.
+- DHCP (Dynamic Host Configuration Protocol) is a service that run on a server (like Microsoft server or Linux server) or router as well
+- DHCP assigns IP address from its scope along with subnet mask, a default gateway, DNS server and other configuration.
 - Scope: A range of IP addresses that a DHCP can give out and all the information related to the subnet that it is in
 ### Component of DHCP scope
+- Name
+- Description
 - Starting IP nad Ending IP: The range of IP that DHCP can gice out
 - Subnet mask
 - Exclude IP: IP address that should not be assigned to new device that join the network
-- Reserve IP: Specific device will be assigned the same IP address every time it join the network. DHCP recognise the device using its MAC address -> Assign the reserve IP to it
+- Reserve IP: Specific device will be assigned the same IP address every time it join the network. DHCP recognise the device using its MAC address -> Assign the reserve IP to it. Usually given to server, printer, router,...
 - DHCP server: Typiclly a server or a router that holds the network configuration
 - DHCP client: The endpoint that gets the configuration information like a computing device
 - DHCP Relay Agent: If there is only one DHCP for multiple LANs then DHCP relay agent will forward DHCP request to the server because DHCP packets cannot move through router
 - IP address pool: Contains list of IP address which are available
-- Lease time: The ammount of time for which the IP address is available to the client
-
+- Lease time: The ammount of time for which the IP address is available to the client without renewing it
+- Router address: An IP address dedicated to the router as the router address determined what subnetwork the devices are in -> Allow connection to the Internet
+- DNS's name and IP
+### How DHCP works
 - After a certain period of time, during lease time, device will send a signal to the DHCP to renew its lease of IP address -> DHCP will know that IP address is still being used 
-- Can make reservation on DHCP using MAC address -> DHCP server will give that specific IP address everytime to that MAC address -> Usually given to server, printer, router,...
-- DHCP is a service that run on a server (like Microsoft server or Linux server) or router as well
 
 ## Default gateway
 - A default gateway forward data from one network to another (Typically a router)
