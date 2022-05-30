@@ -97,6 +97,26 @@
 ### How DHCP works
 - After a certain period of time, during lease time, device will send a signal to the DHCP to renew its lease of IP address -> DHCP will know that IP address is still being used 
 
+
+## Public vs private IP address
+### Public IP address
+- IP address that are registered on the Internet. Typically given to routers. 
+- However, if every device has a public IP address -> Run out of IPv4 -> Use private IP address
+### Private IP address
+- Router gives private IP address to the device in that network -> Device in different network can have the same private IP address
+- When a device want to connect to the Internet -> Router uses NAT (Network address translation) to turn private IP address into public one
+- NAT also translate public IP to private IP
+- Three classes of private IP address
+  - Class A: 
+    - IP address: 10.0.x.x
+    - Subnet mask: 255.0.0.0
+  - Class B:
+    - IP address: 172.16.x.x
+    - Subnet mask: 255.255.0.0
+  - Class C:
+    - IP address: 192.168.x.x
+    - Subnet mask: 255.255.255.0
+
 ## Default gateway
 - A default gateway forward data from one network to another (Typically a router)
 - Default: The first option that is looked up when data needs to exit a network
