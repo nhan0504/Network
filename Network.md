@@ -134,3 +134,28 @@
 - Default: The first option that is looked up when data needs to exit a network
 - If computer A and computer B are on the same network -> Computer B send its MAC address to computer A -> Two computer can communicate
 - If computer A and computer B are on different network -> Computer A get the default gateway MAC address -> Send it data through the gateway -> Send its data to computer B
+
+# TCP/IP Model
+- TCP/IP defines a set of rules for computers to communicate over a network like how data should be formatted, addressed, shipped, routed and delivered to the right destination.
+- Describes the top 4 layers of a 5 layer Internet protocol stack  <br>  
+![5 layers](5layers.JPG)
+  - Physical layer: Encode and transmit data over network communications media. It operates with data in the form of bits from the Physical layer of the sending source and received at the Physical layer of a destination source (Eg: Hook up computers using an Ethernet cable).
+  - Data link: Move packets from the network layer on 2 different hosts. The process of transmitting packets can be controlled in the software device driver for the network card and on firmware. Different protcols are used for different types of networks. 
+  - Network layer: Gets data from a source network to the destination network. This involves routing the packets across a network of networks (also known as internetwork).
+  - Transport layer: Responsible for end-to-end message transfer through the use of ports. 2 categories of end-to-end message transmission: 
+    - TCP: connection-oriented 
+    - UDP: connectionless     
+  - Application layer: The higher-level protocols used by most applications for network communication. Eg: FTP (File Transfer Protocol). 
+- Data coded according to application layer protocols -> encapsulated into one or more transport layer protocols -> use lower layer protocols to transfer data.
+
+### OSI Model and TCP model
+- OSI has 7 layers
+
+| OSI | TCP |
+|-----|-----|
+| Application<br>Presentation<br>Session | Application |
+| Transport | Transport |
+| Network | Internet |
+| Datalink | Datalink | 
+| Physical | Physical |
+  
